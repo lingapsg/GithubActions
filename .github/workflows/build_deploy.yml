@@ -2,6 +2,10 @@ name: BuildDeploy
 on: push
 
 jobs:
-  build-deploy:
+  npm-install:
     runs-on: ubuntu-latest
+    steps:
+    - uses: actions/setup-node@v4
+    - run: npm ci
+  
     
