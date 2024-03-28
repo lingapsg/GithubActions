@@ -10,8 +10,12 @@ jobs:
       with:
         node-version: 21
     - run: npm ci
-    - run: npm lint
-    - run: npm test
-    - run: npm build
-  
+  lint:
+    needs: npm-install
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4 
+      - run: npm lint
+
     
