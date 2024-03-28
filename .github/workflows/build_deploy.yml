@@ -1,0 +1,7 @@
+name: BuildDeploy
+on: push
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    
