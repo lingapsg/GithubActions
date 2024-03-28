@@ -7,4 +7,7 @@ jobs:
     output-issue:
         runs-on: ubuntu-latest
         steps:
-        - run: echo "${{github}}"
+            - name: Print Issues
+              env: 
+                GITHUB_CONTEXT: ${{ toJson(github) }}
+              run: echo "$GITHUB_CONTEXT"
